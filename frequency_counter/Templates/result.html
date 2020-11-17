@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Result</title>
+</head>
+<body>
+	<h2>Word Frequency Counter</h2>
+	<table>
+		<tr>
+			<th>
+				Most Frequent Words
+			</th>
+			<th>&nbsp|&nbsp</th>
+			<th>
+				Frequency
+			</th>
+		</tr>
+		{% for i in dicts %}	
+			<tr>
+				<td>
+					&nbsp{{i.word}}
+				</td>
+				<td></td>	
+				<td>
+					&nbsp{{i.count}}
+				</td>
+			</tr>
+		{% endfor %}
+	</table>
+	
+	{% if data %}
+		<li><b style="color:red">{{data}}</b></li>
+	{% endif %}
+</body>
+</html>

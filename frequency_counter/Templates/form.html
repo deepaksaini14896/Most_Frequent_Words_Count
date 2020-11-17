@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Frequency Counter</title>
+</head>
+<body>
+	<form action="{% url 'result' %}" method='POST'>
+		{% csrf_token %}
+		<table>
+			<tr>
+				<td>
+					URL
+				</td>
+				<td>
+					<input type="url" name="url_request">
+				</td>
+				<td>
+					<input type="submit" value="Submit">
+				</td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>
